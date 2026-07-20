@@ -32,6 +32,7 @@ jobs:
           msbuild nssm.sln
           /p:Configuration=${{ matrix.configuration }}
           /p:Platform=${{ matrix.platform }}
+          /p:PlatformToolset=v143
           /m
 
       - name: Upload artifact
