@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         configuration: [Release, Debug]
-        platform: [win32, win64, arm64]
+        platform: [Win32, x64, ARM64]
 
     steps:
       - name: Checkout repository
