@@ -75,7 +75,11 @@ const TCHAR *nssm_imagepath();
 const TCHAR *nssm_exe();
 
 #define NSSM _T("NSSM")
-#ifdef _WIN64
+#if defined(_M_ARM64)
+#define NSSM_ARCHITECTURE _T("ARM64")
+#elif defined(_M_ARM)
+#define NSSM_ARCHITECTURE _T("ARM")
+#elif defined(_WIN64)
 #define NSSM_ARCHITECTURE _T("64-bit")
 #else
 #define NSSM_ARCHITECTURE _T("32-bit")
